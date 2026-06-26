@@ -1,0 +1,53 @@
+/* HEADER - НАВИГАЦИЯ (десктоп) */
+
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav__link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-white);
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 4px 0;
+    background: none;
+    border: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.nav__link--active {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.nav__link:hover,
+.nav__link:focus {
+    color: var(--color-accent);
+}
+
+
+/* Кнопка "Контакты" с выпадающим списком */
+.nav__link--dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav__link--dropdown-toggle .fa-chevron-down {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nav__link--dropdown-toggle[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Позиционирование для дропдауна */
+.nav__item--dropdown {
+    position: relative;
+}

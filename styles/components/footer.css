@@ -1,0 +1,152 @@
+/* FOOTER */
+
+
+.footer {
+    padding: 40px 0 20px;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    font-size: 14px;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* ===== ЛОГОТИП ===== */
+.footer__logo {
+    margin-bottom: 4px;
+}
+
+.footer__logo-img {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+
+/* ===== ЛЕВАЯ КОЛОНКА ===== */
+.footer__left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer__contacts-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-white);
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.footer__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ===== ТЕЛЕФОНЫ (подчёркивается только номер) ===== */
+.footer__contacts-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 8px;
+    color: var(--color-white);
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.footer__contacts-link .fa-phone {
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Только номер телефона получает подчёркивание */
+.footer__contacts-link .phone-number {
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.footer__contacts-link:hover .phone-number,
+.footer__contacts-link:focus .phone-number {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+.footer__contacts-link:hover,
+.footer__contacts-link:focus {
+    color: var(--color-white);
+}
+
+
+/* ===== СОЦСЕТИ ===== */
+.footer__socials {
+    display: flex;
+    gap: 16px;
+}
+
+.footer__socials a {
+    transition: all 0.3s ease;
+}
+
+.footer__socials a:hover,
+.footer__socials a:focus {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.footer__socials img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+
+/* ===== ПРАВАЯ КОЛОНКА ===== */
+.footer__right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__info-text {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.7;
+}
+
+.footer__info-text--bold {
+    font-weight: 600;
+    opacity: 1;
+    color: var(--color-white);
+}
+
+.footer__info-text:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+/* Ссылка с подчеркиванием при наведении */
+.footer__info-link {
+    display: inline-block;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: auto; /* ширина по содержимому */
+    text-decoration: none;
+}
+
+.footer__info-link:hover {
+    text-decoration: underline; 
+    text-underline-offset: 3px; /* отступ от текста */
+    text-decoration-thickness: 1px; 
+}
+
+/* ===== КОПИРАЙТ (под белой полосой) ===== */
+.footer__copyright {
+    padding-top: 24px;
+    border-top: 1px solid var(--color-white);
+    text-align: left;
+    font-size: 16px;
+    opacity: 0.6;
+}

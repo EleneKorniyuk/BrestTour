@@ -1,0 +1,136 @@
+/* HERO-секция */
+
+
+.hero {
+    padding-top: 72px; /* Высота хедера (min-height: 72px) */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: var(--color-white);
+}
+
+/* Фоновое изображение (нижний слой) */
+.hero__bg {
+    position: absolute;
+    top: 72px; /* Сдвигаем вниз на высоту хедера */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../assets/images/image_1.png') top center/cover no-repeat; /* top center - чтобы фото не обрезалось сверху */
+    z-index: 0;
+}
+
+/* Затемнение (средний слой) */
+.hero__bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(35, 56, 73, 0.3);
+    z-index: 1;
+}
+
+/* Текст (верхний слой) */
+.hero__container {
+    position: relative;
+    z-index: 2; 
+    width: 100%;
+}
+
+
+.hero__content {
+    text-align: left; 
+}
+
+.hero__title {
+    font-size: 58px;
+    font-weight: 900;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    letter-spacing: 1.2px;
+    text-shadow: 
+        2px 2px 2px rgba(0, 0, 0, 0.3),
+        2px 4px 2px rgba(0, 0, 0, 0.2),
+        8px 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.hero__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 40px;
+    letter-spacing: 1.2px;
+    text-shadow: 
+        2px 2px 2px rgba(0, 0, 0, 0.3),
+        2px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* ===== БЛОК: КНОПКА + ГАЛОЧКИ ===== */
+.hero__action {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует кнопку и галочки по центру блока */
+    width: fit-content; /* Блок подстраивается под ширину кнопки */
+}
+
+
+/* ===== ГАЛОЧКИ ВНИЗ (анимация) ===== */
+.hero__scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    margin-top: 16px;
+    cursor: pointer;
+    padding: 8px 0;
+}
+
+.scroll-arrow {
+    font-size: 32px;
+    color: var(--color-white);
+    line-height: 0.5;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    transform: scaleX(2.5); /* Растягиваем по горизонтали */
+    transform-origin: center;
+}
+
+/* Разная прозрачность */
+.scroll-arrow--1 {
+    opacity: 0.15;
+    animation: scrollBounce 2s ease-in-out infinite;
+}
+
+.scroll-arrow--2 {
+    opacity: 0.4;
+    animation: scrollBounce 2s ease-in-out 0.3s infinite;
+}
+
+.scroll-arrow--3 {
+    opacity: 1;
+    animation: scrollBounce 2s ease-in-out 0.6s infinite;
+}
+
+
+/* Ховер на индикаторе */
+.hero__scroll-indicator:hover .scroll-arrow {
+    animation-play-state: paused;
+}
+
+.hero__scroll-indicator:hover .scroll-arrow--1 {
+    opacity: 0.1;
+}
+
+.hero__scroll-indicator:hover .scroll-arrow--2 {
+    opacity: 0.5;
+}
+
+.hero__scroll-indicator:hover .scroll-arrow--3 {
+    opacity: 1;
+}

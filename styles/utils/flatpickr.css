@@ -1,0 +1,26 @@
+/* FLATPICKR (Календарь) */
+
+
+.flatpickr-calendar {
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    font-family: 'Inter', sans-serif;
+}
+
+.flatpickr-day.selected {
+    background: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+.flatpickr-day.selected:hover {
+    background: #3d6483;
+    border-color: #3d6483;
+}
+
+.flatpickr-day.today {
+    border-color: var(--color-accent);
+}
+
+.flatpickr-day.today.selected {
+    border-color: var(--color-secondary);
+}

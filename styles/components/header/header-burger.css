@@ -1,0 +1,23 @@
+/* HEADER - БУРГЕР */
+
+
+.burger__line {
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--color-white);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Крестик при открытом меню */
+.burger--active .burger__line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.burger--active .burger__line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+}
+.burger--active .burger__line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}

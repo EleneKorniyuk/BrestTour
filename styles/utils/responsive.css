@@ -1,0 +1,332 @@
+/* АДАПТИВНОСТЬ - от меньшего к большему */
+
+
+/* Стили по умолчанию для всех экранов */
+
+.header__nav {
+    display: none;
+}
+
+.header__currency {
+    display: block;
+}
+
+.header__language {
+    display: block;
+}
+
+.header__book-btn {
+    display: none;
+}
+
+.header__burger {
+    display: flex;
+}
+
+
+/* ===== ТЕЛЕФОНЫ (360px - 767px) ===== */
+@media (min-width: 360px) and (max-width: 767px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    /* hero-секция */
+    .hero {
+        padding: 100px 0 60px;
+        min-height: auto;
+    }
+    .hero__title {
+        font-size: 29px;
+    }
+    .hero__subtitle {
+        font-size: 16px;
+    }
+
+    /* schedule */
+    .schedule {
+        padding: 40px 0 60px;
+    }
+    .schedule__title {
+        font-size: 24px;
+    }
+    .schedule__title-sub {
+        font-size: 20px;
+    }
+
+    /* Поиск - в колонку на мобилке */
+    .search-form {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 16px;
+    }
+    .search-form__group {
+        width: 100%;
+        flex: none;
+    }
+    .search-form__btn {
+        width: 100%;
+        flex: none;
+    }
+
+    /* Карточки - 1 колонка */
+    .schedule__grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .tour-card {
+        padding: 16px;
+        flex-direction: row;
+        align-items: stretch;
+        min-height: 100px;
+        gap: 12px;
+        flex-wrap: nowrap;
+    }
+    .tour-card__left {
+        flex: 1;
+        justify-content: center;
+        min-width: 0; 
+        overflow: hidden;
+    }
+    .tour-card__date {
+        font-size: 16px;
+    }
+    .tour-card__info {
+        font-size: 13px;
+    }
+    .tour-card__status {
+        font-size: 13px;
+    }
+
+    /* Правая часть - цена в 2 ряда, кнопка под ценой */
+    .tour-card__right {
+        align-items: left; 
+        margin-left: 0;
+        min-height: 100%;
+        flex-shrink: 0;
+        justify-content: space-between;
+    }
+    .tour-card__price {
+        text-align: left; /* Цена слева */
+        display: flex;
+        flex-direction: column; /* Цена в 2 ряда */
+        gap: 2px;
+    }
+    .tour-card__price-adult {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    .tour-card__price-child {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+    
+    .tour-card__btn {
+        min-height: 32px;
+        padding: 6px 14px;
+        font-size: 11px;
+        white-space: nowrap;
+        width: auto;
+        max-width: 100%;
+    }
+
+    /* Отзывы */
+    .reviews {
+        padding: 40px 0 60px;
+    }
+    .reviews__title {
+        font-size: 24px;
+    }
+    .review-card {
+        padding: 16px;
+    }
+
+    /* footer */
+    .footer {
+        padding: 30px 0 16px;
+    }
+    .footer__container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .footer__logo-img {
+        height: 45px;
+    }
+    .footer__left {
+        gap: 20px;
+    }
+    .footer__right {
+        text-align: left;
+        padding-top: 0;
+    }
+    .footer__info-text {
+        font-size: 14px;
+    }
+    .footer__copyright {
+        font-size: 12px;
+    }
+    .footer__socials {
+        justify-content: flex-start;
+    }
+}
+
+
+/* ===== TABLET (768px - 1023px) ===== */
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* header */
+    .header__nav {
+        display: none;
+    }
+    .header__currency {
+        display: block;
+    }
+    .header__language {
+        display: block;
+    }
+    .header__book-btn {
+        display: none;
+    }
+    .header__burger {
+        display: flex;
+    }
+
+    /* hero-секция */
+    .hero__title {
+        font-size: 64px;
+    }
+    .hero__subtitle {
+        font-size: 20px;
+    }
+
+    /* schedule */
+    .schedule__title {
+        font-size: 36px;
+    }
+    .schedule__title-sub {
+        font-size: 20px;
+    }
+
+    /* Поиск */
+    .search-form {
+        gap: 12px;
+        padding: 16px 20px;
+        flex-wrap: wrap;
+    }
+    .search-form__group {
+        min-width: 100px;
+        flex: 1;
+    }
+    .search-form__btn {
+        min-width: 100px;
+        width: auto;
+    }
+
+    /* Карточки */
+    .schedule__grid {
+        gap: 16px;
+    }
+    .tour-card {
+        padding: 16px 18px;
+        min-height: 100px;
+    }
+    .tour-card__date {
+        font-size: 16px;
+    }
+    .slider__track {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    /* Отзывы */
+    .reviews__title {
+        font-size: 36px;
+    }
+
+    /* footer */
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+    }
+    .footer__logo {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 12px;
+    }
+    .footer__left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .footer__right {
+        grid-column: 2;
+        grid-row: 2;
+        text-align: left;
+        align-self: start;
+        padding-top: 0;
+    }
+    .footer__copyright {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+}
+
+
+/* ===== DESKTOP (от 1024px) ===== */
+@media (min-width: 1024px) {
+    /* header */
+    .header__nav {
+        display: block;
+    }
+    .header__currency {
+        display: block;
+    }
+    .header__language {
+        display: block;
+    }
+    .header__book-btn {
+        display: inline-flex;
+    }
+    .header__burger {
+        display: none;
+    }
+
+    /* slider */
+    .slider__track {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 24px;
+    }
+
+    /* footer */
+    .footer__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+    }
+    /* Логотип — над левой колонкой */
+    .footer__logo {
+        grid-column: 1;
+        grid-row: 1;
+        margin-bottom: 16px;
+    }
+    /* Левая колонка (контакты + соцсети) — строка 2 */
+    .footer__left {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    /* Правая колонка (текст) — строка 2, на одном уровне с контактами */
+    .footer__right {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: end;
+        text-align: left;
+        align-self: start; /* Прижимаем к верху */
+        padding-top: 0;
+    }
+    .footer__copyright {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+}

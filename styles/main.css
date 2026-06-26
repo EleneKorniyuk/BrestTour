@@ -1,0 +1,35 @@
+/*  ГЛАВНЫЙ ФАЙЛ СТИЛЕЙ 
+    (подключает все остальные CSS-файлы по секциям) 
+*/
+
+
+/* 1. Переменные */
+@import 'variables.css';
+
+/* 2. Базовые стили */
+@import 'base.css';
+
+
+/* 3. Компоненты */
+
+/* Компоненты - HEADER (разбит на группы) */
+@import 'components/header/header-core.css';
+@import 'components/header/header-nav.css';
+@import 'components/header/header-dropdowns.css';
+@import 'components/header/header-burger.css';
+@import 'components/header/header-mobile.css';
+
+/* Остальные компоненты */
+@import 'components/buttons.css';
+@import 'components/header.css';
+@import 'components/hero.css';
+@import 'components/schedule.css';
+@import 'components/reviews.css';
+@import 'components/footer.css';
+
+
+/* 4. Утилиты */
+@import 'utils/flatpickr.css';
+@import 'utils/animations.css';
+@import 'utils/responsive.css';
+

@@ -1,0 +1,72 @@
+/* HEADER - ОСНОВНЫЕ СТИЛИ (контейнер, позиционирование) */
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--color-secondary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: 20px;
+}
+
+/* Логотип - всегда слева */
+.header__logo {
+    flex-shrink: 0;
+    margin-right: auto; /* Отталкивает всё остальное вправо */
+}
+
+.header__logo-img {
+    height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
+
+/* Скрываем элементы на мобилке, показываем на десктопе */
+.header__nav {
+    display: none;
+    margin-left: auto; /* Прижимает к правому краю */
+}
+.header__currency {
+    display: none;
+}
+.header__language {
+    display: none;
+}
+.header__book-btn {
+    display: none;
+}
+
+
+.header__burger {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: none;
+    border: 1px solid var(--color-gray-lighter);
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+    flex-shrink: 0;
+}
+
+.header__mobile-menu {
+    background: var(--color-secondary);
+    padding: 30px 0;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+}
+
+.header__mobile-menu[hidden] {
+    display: none;
+}
