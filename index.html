@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0", maximum-scale=5.0, user-scalable=yes">
     <title>Экскурсия: Тысячелетний Брест и Брестская крепость</title>
 
     <!-- Favicon -->
@@ -213,12 +213,12 @@
                     
                     <div class="search-form__group">
                         <label for="adults" class="search-form__label">Кол-во взрослых</label>
-                        <input type="number" id="adults" class="search-form__input" value="1" min="1" max="10">
+                        <input type="number" id="adults" class="search-form__input" value="1" min="1" max="10" inputmode="numeric" pattern="[0-9]*">
                     </div>
                     
                     <div class="search-form__group">
                         <label for="children" class="search-form__label">Кол-во детей</label>
-                        <input type="number" id="children" class="search-form__input" value="0" min="0" max="10">
+                        <input type="number" id="children" class="search-form__input" value="0" min="0" max="10" inputmode="numeric" pattern="[0-9]*">
                     </div>
                     
                     <button type="submit" class="search-form__btn btn btn--search">

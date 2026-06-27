@@ -46,8 +46,8 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    flex: 1;
-    min-width: 0;
+    flex: 1 1 0;    /* iOS фикс: вместо flex: 1 */
+    min-width: 0;   /* Чтобы не вылезало за пределы */
     position: relative;
 }
 
@@ -56,6 +56,7 @@
     font-weight: 600;
     color: var(--color-gray);
     letter-spacing: 0.5px;
+    white-space: nowrap;    /* Чтобы подписи не переносились */
 }
 
 .search-form__input {
@@ -68,7 +69,22 @@
     color: var(--color-primary);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
+    min-width: 0;   /* iOS фикс */
     height: 44px;
+    -webkit-appearance: none;   /* Убирает нативную стилизацию iOS */
+    appearance: none;
+}
+
+/* Для input type="number" на iOS */
+.search-form__input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.search-form__input[type="number"]::-webkit-inner-spin-button,
+.search-form__input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .search-form__input:focus {
@@ -97,6 +113,7 @@
     justify-content: center;
     min-height: 44px;
     padding: 10px 32px;
+    white-space: nowrap;    /* Чтобы текст кнопки не переносился */
 }
 
 

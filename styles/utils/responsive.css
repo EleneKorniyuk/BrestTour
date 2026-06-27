@@ -63,10 +63,30 @@
     .search-form__group {
         width: 100%;
         flex: none;
+        min-width: 100%;
     }
+
+    .search-form__input {
+        font-size: 16px; 
+        height: 48px;
+        padding: 10px 14px;
+    }
+
     .search-form__btn {
         width: 100%;
         flex: none;
+        min-height: 48px;
+        font-size: 16px;
+    }
+
+    .search-form__label {
+        font-size: 13px;
+        white-space: normal;
+    }
+
+    .search-form__icon {
+        bottom: 14px;
+        right: 14px;
     }
 
     /* Карточки - 1 колонка */
